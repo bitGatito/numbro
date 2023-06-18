@@ -81,6 +81,7 @@
     "lint": "gulp lint",
     "test": "gulp test",
     "prepare": "npm run build",
+    "build": "ng build",
     "coverage": "istanbul cover ./node_modules/.bin/jasmine --captureExceptions"
   },
   "files": [
