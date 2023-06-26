@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-    languageTag: "BTC",
+    languageTag: "x-BTC",
     delimiters: {
         thousands: ",",
         decimal: "."
