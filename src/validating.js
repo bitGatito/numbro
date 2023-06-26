@@ -24,6 +24,7 @@ let unformatter = require("./unformatting");
 
 // Simplified regexp supporting only `language`, `script`, and `region`
 const bcp47RegExp = /^[a-z]{2,3}(-[a-zA-Z]{4})?(-([A-Z]{2}|[0-9]{3}))?$/;
+const bcp47RegExpPrivate = /^[x]{1}(-[a-zA-Z]*)?$/;
 
 const validOutputValues = [
     "currency",
@@ -172,7 +173,7 @@ const validLanguage = {
         type: "string",
         mandatory: true,
         restriction: (tag) => {
-            return tag.match(bcp47RegExp);
+            return tag.match(bcp47RegExp)+tag.match(bcp47RegExpPrivate);
         },
         message: "the language tag must follow the BCP 47 specification (see https://tools.ieft.org/html/bcp47)"
     },
