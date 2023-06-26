@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-    languageTag: "en-US-x-bitcoin",
+    languageTag: "x-bitcoin",
     delimiters: {
         thousands: ",",
         decimal: "."
